@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  
+  <div class="h-screen w-full flex">
+    <div class="flex-auto">
+      <h1 class="text-lg text-blue-300">
+        小荷，你好。
+      </h1>
+      <p id="s1">在干嘛呢？</p>
+      <button onclick="button_onclick()" class="bg-blue-500  text-white px-6 py-1 rounded-full" >看看</button>
+    </div>
+  </div>
+
+  <script>
+    function button_onclick()
+    {
+      x=document.getElementById("s1");  // 找到元素
+      x.innerHTML="在想你呢~";    // 改变内容
+    }
+    </script>
+</body>
+</html>

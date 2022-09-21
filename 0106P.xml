@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE students[
+ <!ELEMENT students (student+)>
+ <!ELEMENT student EMPTY>
+ <!ATTLIST student number ID #REQUIRED>
+ <!ATTLIST student name CDATA #REQUIRED>
+ <!ATTLIST student sex (male | female) "male">
+ <!ATTLIST student friend IDREF #IMPLIED>
+]>
+<students>
+    <student number="s0701" name="linjiahao" sex="male" friend="tianweiheng"></student >
+    <student number="s0630" name="tianweiheng" sex="male" friend="linjiahao"></student>
+</students>

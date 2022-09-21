@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>星云 - 注册</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet" type="text/css" >
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <main class="form-signin w-100 m-auto">
+        <form action="" class="form-signin" id="form">
+            <h2 class="text-center" style="font-family:STZhongsong">注册</h2>
+            <div class="row mb-3 ">
+                <label for="input_name" class="col-sm-2 col-form-lable" >姓名</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="input_name" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="row mb-3"> 
+                <label for="input_passwd" class="col-sm-2 col-form-label" >密码</label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" id="input_passwd" placeholder="请输入密码">
+                </div>
+            </div>
+            <fieldset class="row mb-3" >
+                <legend class="col-form-lable col-sm-2 pt-0 fs-6">性别</legend>
+                <div class="form-check col-sm-3 ">
+                    <input class="form-check-input" type="radio" value="男" name="sex" id="male" checked> 
+                    <label class="form-check-label" for="male">
+                        男
+                    </label>
+                </div>
+                <div class="form-check col-sm-3">
+                    <input class="form-check-input" type="radio" value="女" name="sex" id="female"> 
+                    <label class="form-check-label" for="female">
+                        女
+                    </label>
+                </div>
+            </fieldset>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">学历</label>
+                <div class="col-sm-10">
+                    <select class="form-select" id="degree">
+                        <option value="本科生" selected>本科生</option>
+                        <option value="研究生">研究生</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2">爱好</label>
+                <div class="col-auto">
+                    <div class="form-check col-auto">
+                        <input class="form-check-input" type="checkbox" name="hobby" value="玩MC" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            玩MC
+                        </label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check col-auto">
+                        <input class="form-check-input" type="checkbox" name="hobby" value="看风景" id="gridCheck2">
+                        <label class="form-check-label" for="gridCheck2">
+                            看风景
+                        </label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check col-auto">
+                        <input class="form-check-input" type="checkbox" name="hobby" value="弹古琴" id="gridCheck3">
+                        <label class="form-check-label" for="gridCheck3">
+                            弹古琴
+                        </label>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="col-4 m-auto" style="text-align:center">
+                <button class="m-auto btn btn-primary"  onclick="signup_onclick()">提交</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        function signup_onclick() {
+            var username = document.getElementById('input_name').value;
+            var password = document.getElementById("input_passwd").value;
+            var select_sex = document.getElementsByName("sex");
+            for(var i=0; i<2; i++){
+                if(select_sex[i].checked){
+                    var sex=select_sex[i].value;
+                }
+            }
+            var hobbys = "";
+            var hobby = document.getElementsByName("hobby");
+            for(var i=0; i<3;i++){
+                if(hobby[i].checked){
+                    hobbys+=hobby[i].value + " ";
+                }
+            }
+            var degree = document.getElementById("degree").value;
+            var output = "用户名: " + username + "\n密码:" 
+                + password +"\n性别:"+sex 
+                + "\n学历:" + degree + "\n爱好:"+hobbys;
+            alert(output);
+        }
+    </script>
+</body>
+</html>
