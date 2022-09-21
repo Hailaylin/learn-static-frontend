@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="row mb-3"> 
-                <label for="input_passwd" class="col-sm-2 col-form-label" >密码</label>
+                <label for="input_passwd" class="col-sm-2 col-form-label">密码</label>
                 <div class="col-sm-10">
                 <input type="password" class="form-control" id="input_passwd" placeholder="请输入密码">
                 </div>
@@ -78,11 +78,13 @@
             </div>
             
             <div class="col-4 m-auto" style="text-align:center">
-                <button class="m-auto btn btn-primary"  onclick="signup_onclick()">提交</button>
+                <button class="m-auto btn btn-primary">提交</button>
             </div>
         </form>
     </main>
-    <script>
+    <!-- JavaScript开发 -->
+    <!-- <script>
+        onclick="signup_onclick()"
         function signup_onclick() {
             var username = document.getElementById('input_name').value;
             var password = document.getElementById("input_passwd").value;
@@ -105,6 +107,25 @@
                 + "\n学历:" + degree + "\n爱好:"+hobbys;
             alert(output);
         }
+    </script> -->
+    <!-- JQuery开发 -->
+    <script>
+        $(function () {
+            $("button").click(function() {
+                var username = $("#input_name").val();
+                var password = $("#input_passwd").val();
+                var sex=$("input:radio:checked").val();
+                var degree=$("#degree").val();
+                var hobbys="";
+                $.each($("input:checkbox:checked"),function(){
+                    hobbys=hobbys+$(this).val()+" ";
+                })
+                var output = "用户名: " + username + "\n密码:" 
+                + password +"\n性别:"+sex 
+                + "\n学历:" + degree + "\n爱好:"+hobbys;
+                alert(output)
+            })
+        })
     </script>
 </body>
 </html>
