@@ -23,21 +23,29 @@ html {
     padding: 10px 10px;
   }
 
-  nav{
+  .icon-bar {
     position: sticky;
-    top:0px;
-    display: flex;
-    border:#afaeae;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #88d1ff8c;
+    top: 0;
+    width: 100%;
+    background-color: rgb(149, 139, 139);
+    overflow: auto; /* 溢出浮动 */
   }
 
-  nav > div{
-    flex:1;
+  .icon-bar a{
+    float: right;
     text-align: center;
-    background-color: #ffffff8c;
-    margin: 0px 30px;
+    width: 10%;
+    padding: 5px 0; /* 上下内边距12px */
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+
+  .icon-bar a:hover{
+    background-color: #000;
+  }
+
+  .active {
+    background-color: rgb(43, 200, 66);
   }
 }
 
