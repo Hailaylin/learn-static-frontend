@@ -1,0 +1,56 @@
+html {
+  margin: 0 auto;
+}
+
+/* 尝试响应式显示图片大小 */
+@media (min-width:1000px) {
+
+  #xiaohe_spaceship {
+    width: 500px;
+  }
+
+  div.img {
+    text-align: center;
+  }
+
+  article {
+    background-color: #ffffff;
+    border: 2px solid rgb(212, 209, 209);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #afaeae;
+    width: 850px;
+    margin: 10px auto;
+    padding: 10px 10px;
+  }
+
+  nav{
+    position: sticky;
+    top:0px;
+    display: flex;
+    border:#afaeae;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #88d1ff8c;
+  }
+
+  nav > div{
+    flex:1;
+    text-align: center;
+    background-color: #ffffff8c;
+    margin: 0px 30px;
+  }
+}
+
+@media (max-width:500px) {
+  #xiaohe_spaceship {
+    width: 300px;
+  }
+
+
+}
+
+
+footer {
+  text-align: center;
+  color: #aeaeae;
+}
