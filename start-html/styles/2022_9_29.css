@@ -1,0 +1,123 @@
+html {
+  margin: auto;
+}
+
+
+body{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: auto;
+}
+
+html body nav a{
+  border: 3px;
+  padding: 3px;
+  margin: 10px;
+  background-color: rgba(39, 210, 225, 0.589);
+}
+
+a:link{
+  text-decoration: none; 
+  color:blue
+}
+
+a:after {
+  color: #e7693f;
+}
+
+a:visited {
+  color: rgb(107, 17, 17);
+  
+}
+
+a:hover {
+  background-color: #e7693f;
+}
+
+.ps {
+  border-left: 7px solid;
+  border-color: #4687ea;
+  background-color: #abf3f9c3;
+  padding: 10px 10px 10px 20px;
+}
+
+/* 反思卡片、疑问卡片 */
+.rething_card {
+  font-family: "楷体";
+  font-size: 1.2rem;
+  background-color: #f2eafc;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 反思的标题，颜色神一些 */
+.rething_title {
+  padding: 2px;
+  margin: 5px;
+  border: 2px;
+  border-radius: 2px;
+  background-color: #d6c6ea;
+  color: #8433e7;
+  font-family: "华文中宋";
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* 想法卡片，用于标记自己突然冒出的好想法 */
+.idea_card {
+  font-family: "楷体";
+  font-size: 1.2rem;
+  background-color: #ffecdcd1;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.idea_title {
+  padding: 2px;
+  margin: 5px;
+  border: 2px;
+  border-radius: 3px;
+  background-color: #ffbf88ad;
+  color: #ff7500;
+  font-family: "华文中宋";
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* 标题类 */
+h1 {
+  text-align:center;
+  font-family: "华文中宋";
+  font-size: 3em;
+}
+
+.article_time{
+  text-align: right;
+  font-family: "Consolas";
+}
+
+/* 头像格式 */
+.avatar_img {
+  width: 100px;
+}
+
+div.author_msg {
+  padding: 5px;
+  background-color: aliceblue;
+  width: 100px;
+  text-align: center;
+}
+
+img {
+  width: 600px;
+}
+
+/* 定制 em 为高亮 */
+em {
+  background-color: #faff72;
+  font-style: normal;
+}

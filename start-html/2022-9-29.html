@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://qiniu.oos.hailay.site/img/favicon.ico">
+  <title>2022-9-27笔记|星林|星云</title>
+  <link rel="stylesheet" type="text/css" href="styles/2022_9_29.css">
+  <!-- <link rel="stylesheet" href="styles/general/style.css"> -->
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 2px solid rgb(200,200,200);
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+
+    td, th {
+      border: 1px solid rgb(190,190,190);
+      padding: 10px 20px;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    caption {
+      padding: 10px;
+    }
+    </style>
+</head>
+<body>
+  <!-- 页眉 -->
+  <!-- <header>
+    <p>页眉还不知道要放什么好qaq</p>
+  </header> -->
+
+  <!-- 导航 -->
+  <nav>
+    <a class="nav_item" href="index.html" title="首页">首页</a> |
+    <a href="about.html" title="关于">关于</a> |
+    <a href="friends.html" title="朋友们">朋友们</a>
+  </nav>
+  <hr>
+  <!-- 导航 -->
+  <!-- TODO:有重复代码怎么解决？ -->
+
+  <main>
+    <article>
+      <h1>HTML笔记-最后+CSS入门</h1>
+      <div class="author_msg">
+        <!-- 缺个布局，想在同一行显示姓名和时间 -->
+        <img class="avatar_img" src="https://s2.loli.net/2022/03/08/3M7n5IPviC4ebNF.png">
+        <span class="author_name">星林·Hailay</span>
+      </div>
+      <p class="article_time">2022年9月29日10:07:19</p>
+      <div class="ps">
+        <p>昨天休息完了，今天又是精神的一天~</p>
+      </div>
+      
+      <div class="rething_card">
+        <p><span class="rething_title">🧐反思</span>没有什么是行不通的。</p>
+      </div>
+
+      <div class="idea_card">
+        <p><span class="idea_title">❤️想法</span>或许真的能出一套具有良好阅读体验的CSS集自己用，不管是自己写还是看都是很舒服的。</p>
+      </div>
+    <section>
+      <h2>SVG前略尝试</h2>
+      <p>从前就知道SVG是个好东西，但是不知道具体怎么创建和用。现在发现，用来画一些<em>简单的小图形</em>还是很有用的。</p>
+      <svg width="600" height="100%">
+        <rect width="100%" height="100%" fill="red" />
+        <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+        <polygon points="120,0 240,225 0,225" fill="green"/>
+        <text x="50" y="100" font-family="Verdana" font-size="55"
+              fill="white" stroke="black" stroke-width="2">
+                Hello!
+        </text>
+      </svg>
+      <p>内联SVG可以用CSS和JS改变样式，感觉很厉害的样子</p>
+    </section>
+
+    <section>
+      <h2>尝试响应式图像</h2>
+      <p>以飞船为例子，在大分辨率1080px以上和小分辨率1080以下显示不同图片</p>
+      <picture>
+        <source media="(max-width: 1079px)" width="600" srcset="https://qiniu.oos.hailay.site/img/xiaohe_spaceship_cut_phone.webp">
+        <source media="(min-width: 1080px)" width="1000" srcset="https://qiniu.oos.hailay.site/img/xiaohe_spaceship_webp.webp">
+        <img src="https://qiniu.oos.hailay.site/img/xiaohe_spaceship_web.jpg" alt="小荷">
+      </picture>
+
+      <h3>显示不同分辨率的相同图片</h3>
+      <img srcset="https://qiniu.oos.hailay.site/img/TOMATO_JOURNEY_70184674_p2@0.5x.webp 1024w,
+      https://qiniu.oos.hailay.site/img/TOMATO_JOURNEY_70184674_p2@0.75x.webp, 2300w"
+            sizes="(max-width: 600px) 500px,
+                  (max-width: 1000px) 800px"
+            src="https://qiniu.oos.hailay.site/img/xiaohe_spaceship_web.jpg"
+            alt="拉阿拉啦">
+    </section>
+
+    
+    <section>
+      <h2>表格测试:课程表</h2>
+      <table>
+        <caption style="color:#e51670; font-size: large; font-weight: 1000;">大三上计算机课程表</caption>
+        <colgroup>
+          <col span="2">
+          <col style="background-color:#97DB9A;" width="80px">
+          <col style="width: 80px;">
+          <col style="background-color: #f89d9a; border-radius: 4px; border: 5px blueviolet solid;">
+          <col span="1">
+          <col style="background-color:#DCC48E; ">
+        </colgroup>
+        <thead>
+          <td>&nbsp;</td>
+          <th>星期1</th>
+          <th>星期2</th>
+          <th>星期3</th>
+          <th>星期4</th>
+          <th>星期5</th>
+          <th>星期6</th>
+          <th>星期7</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>第1节</th>
+            <td style="background-color: rgba(111, 228, 16, 0.781)" colspan="3">JavaWeb</td>
+            <td>&nbsp;</td>
+            <td>JavaWeb</td>
+            <td rowspan="5">补课</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>第2节</th>
+            <td>马原</td>
+            <td>软工</td>
+            <td>&nbsp;</td>
+            <td>操作系统</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>第3节</th>
+            <td>计网</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>马原</td>
+            <td>习思</td>
+          </tr>
+          <tr>
+            <th>第4节</th>
+            <td>操作系统</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>马原</td>
+            <td>JavaWeb</td>
+            <td>习思</td>
+          </tr>
+          <tr>
+            <th>第5节</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>计网</td>
+            <td>软工</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>总结</th>
+            <th colspan="5">针不戳</th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>©Hailay 2022 Copyright | 粤ICP备2021145979号</p>
+  </footer>
+</body>
+</html>
