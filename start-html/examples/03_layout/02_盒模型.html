@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://qiniu.oos.hailay.site/img/favicon.ico">
+    <title>03布局_02_盒模型</title>
+  </head>
+  <style>
+    .box1{
+      background-color: rgb(58, 208, 78);
+      /* 内容区大小 */
+      width: 100px;
+      height: 100px;
+      /* 边框 */
+      border: 10px solid rgb(49, 137, 225);
+      /* border-width: 10px 20px 30px 40px; */
+      border-width: 10px 20px 30px;
+      border-color: rgb(28, 177, 236) rgb(94, 230, 230);
+      /* border-style: solid dotted dashed double; */
+      /* 内边距 */
+      padding: 10px 20px 30px 40px;
+    }
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <article>
+      <h1>布局 盒模型</h1>
+      <div class="box1">
+        <div class="inner">100*100内容块 -> 可见块</div>
+      </div>
+    </article>
+
+    <footer>
+      <p>©<a href="https://hailay.site/">Hailay</a> 2022 Copyright <a href="https://beian.miit.gov.cn/">粤ICP备2021145979号</a></p>
+    </footer>
+  </body>
+</html>

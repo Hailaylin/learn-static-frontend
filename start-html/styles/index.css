@@ -3,7 +3,7 @@ html {
 }
 
 /* 尝试响应式显示图片大小 */
-@media (min-width:1000px) {
+@media (min-width:996px) {
 
   #xiaohe_spaceship {
     width: 500px;
@@ -20,7 +20,7 @@ html {
     box-shadow: 10px 10px 10px #afaeae;
     width: 850px;
     margin: 10px auto;
-    padding: 10px 10px;
+    padding: 10px 50px 50px 50px;
   }
 
   .icon-bar {
@@ -47,6 +47,12 @@ html {
 
   .active {
     background-color: rgb(43, 200, 66);
+  }
+
+  h1 {
+    text-align: center;
+    font-family: "华文中宋";
+    font-size: 2rem;
   }
 }
 
