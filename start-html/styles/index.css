@@ -34,8 +34,9 @@ html {
   .icon-bar a{
     float: right;
     text-align: center;
-    width: 10%;
-    padding: 5px 0; /* 上下内边距12px */
+    width: auto;
+    margin: 0px 10px;
+    padding: 5px 5px; /* 上下内边距12px */
     color: #ffffff;
     font-size: 1.5rem;
   }
@@ -57,8 +58,27 @@ html {
 
 }
 
-
+/* 页脚设置 */
 footer {
   text-align: center;
   color: #aeaeae;
+}
+
+footer a:link{
+  color: #aeaeae;
+}
+
+footer a:visited{
+  color: #aeaeae;
+}
+
+footer a::after{
+  content: "";
+  display: inline-flex;
+  -webkit-mask-box-image: url(../images/link.svg); /* 图像地址没写对调了半天 */
+  -webkit-mask-size: cover;
+  width: 10px;
+  height: 10px;
+  margin-left: 4px;
+  background-color: #aeaeae;
 }
